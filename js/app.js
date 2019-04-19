@@ -115,4 +115,5 @@ new Product('wine-glass', 'img/wine-glass.jpg');
 console.log('object length' + Product.all.length);
 
 //Add click event on image
+displayImages();
 imgContainer.addEventListener('click', imageClick);
