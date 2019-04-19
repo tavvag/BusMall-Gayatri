@@ -15,14 +15,33 @@
    </header>
    <main>
         <p>One Stop Unlimited Online Shopping</p>
+        <form id="chart_form">
+        
+            <select id ="select-tag" name="chart-type" >
+                <option value="line">Line</option>
+                <option value="bar">Bar</option>
+                <option value="pie">Pie</option>
+                <option value="polar area">Polar</option>
+                <option value="radar">Radar</option>
+                <option value="bubble">Bubble</option>
+                <option value="doughnut ">Doughnut </option>
+            </select>
+            <br><br>
+            <input type="submit">
+            
+        </form>
+        <button id="button" type="submit">View Data</button>
     <section>
             <ul id="image_placeholder">
                     <li><img id="first_image" class = 'image-display' src=""></li>
                     <li><img id="second_image" class = 'image-display' src=""></li>
                     <li><img id="third_image" class = 'image-display' src =""></li>   
             </ul>
+     <div id='display'></div>       
+<canvas id="chart" width="500" height="500"></canvas>
 </section>
 </main>
+<script src="js/chart.js"></script>
 <script src="js/app.js"></script> 
 </body>
 </html>
