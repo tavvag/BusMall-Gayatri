@@ -1,0 +1,89 @@
+
+body {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  header {
+    height: 110px;
+    background-color: palegoldenrod;
+  }
+  header h1 {
+    padding-left: 10px;
+    position: relative;
+    top: 18px;
+    left: 50px;
+    float: left;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: cursive;
+    font-size: 46px;
+    color:palevioletred;
+  }
+
+  main {
+    font-family: 'Fjalla One', sans-serif;
+    width: 960px;
+    margin: 0 auto;
+    background-color:burlywood;
+ 
+  }
+
+
+  main p{
+ 
+    padding-top: 30px;
+    padding-left: 230px;
+    font-family:monospace;
+    color:darkolivegreen;
+    font-size:30px;
+    height: 60px;
+  }
+
+  #main-img{
+    height:100px;
+    width: 100px; 
+    padding-left: 80px;
+  }
+
+
+  #product-research {
+    width: 700px;
+    margin-left: 120px;
+  }
+
+  ul {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 40px;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 0;
+    background-color: blanchedalmond;
+  }
+  li {
+    
+    display: inline-block;
+    text-align: center;
+    height:350px;
+    width: 250px;
+    margin-right: 15px;
+    border: black;
+  }
+
+  .image-display{
+      height: 350px;
+      width:250px;
+      float: left;
+      margin-right: 15px;
+      padding-left: 20px;
+      border:1px;
+      border-block-start-width: 1em;
+  }
+
+
