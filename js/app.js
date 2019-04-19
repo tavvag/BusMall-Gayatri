@@ -2,10 +2,15 @@
 Product.all = [];
 var numDisplayTimes = 0;
 var initialrandonArray=[];
-var imgContainer = document.getElementById('image_placeholder');
 var productImageNames = [];
 var productImageShown=[];
 var productImageClicked=[];
+var imgContainer = document.getElementById('image_placeholder');
+var canvas = document.getElementById('chart');
+var ctx = canvas.getContext('2d');
+var button = document.getElementById('button');
+var form = document.getElementById('chart_form');
+var chartbackgroundColor=['#000000', '#230f5b', '#5b0e27', '#5b0e27','#42d1f4','#45e860','#e89945','#e86245','#c145e8','#8845e8','#45bfe8','#45e8c4','#7be845','#e8e245','#e84f45','#6d45e8','#7c2e2e','#2e637c','#762e7c'];
 
 //Product Constructor
 function Product(name,filepath){
@@ -63,6 +68,7 @@ function imageClick(event) {
   if(numDisplayTimes > 24) {
     imgContainer.removeEventListener('click', imageClick);
     storeData();
+    document.getElementById('button').style.display = 'block';
   }
 }
 
@@ -90,6 +96,35 @@ function storeData(){
   console.log('localstorage : '+ JSON.parse(localStorage.getItem('image-clicked')));
 }
 
+function buttonClick(event){
+  chart.style.display = 'block';
+  displayChart();
+}
+//Create chart
+function displayChart(){
+var chart = new Chart(ctx, {
+  type: 'bar',
+  title:{
+    text: "User Favourite Things "  
+    },
+  data:
+
+  {
+      labels: JSON.parse(localStorage.getItem("names")),
+      datasets: [{
+          label: 'User Clicks',
+          data: JSON.parse(localStorage.getItem("image-clicked")),
+          backgroundColor: chartbackgroundColor
+      },
+      {
+        label: 'Image Displayed',
+        data: JSON.parse(localStorage.getItem("image-shown")),
+        backgroundColor: chartbackgroundColor
+    }]
+  },
+  options: {}
+});
+}
 
 //create an instance of Products
 new Product('bag', 'img/bag.jpg');
@@ -116,3 +151,4 @@ console.log('object length' + Product.all.length);
 
 //Add click event on image
 imgContainer.addEventListener('click', imageClick);
+button.addEventListener('click', buttonClick);

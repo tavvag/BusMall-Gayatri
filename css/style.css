@@ -36,22 +36,17 @@ body {
  
     padding-top: 30px;
     padding-left: 230px;
-    font-family:monospace;
+    font-family:fantasy;
     color:darkolivegreen;
     font-size:30px;
     height: 60px;
+
   }
 
   #main-img{
     height:100px;
     width: 100px; 
     padding-left: 80px;
-  }
-
-
-  #product-research {
-    width: 700px;
-    margin-left: 120px;
   }
 
   ul {
@@ -64,7 +59,7 @@ body {
     margin-bottom: 1em;
     margin-left: 1em;
     margin-right: 0;
-    background-color: blanchedalmond;
+    background-color:burlywood;
   }
   li {
     
@@ -84,6 +79,29 @@ body {
       padding-left: 20px;
       border:1px;
       border-block-start-width: 1em;
+  }
+
+  #button {
+  background-color:#79024569;
+  padding: 9px 10px;
+  text-align: center;
+  size:10px;
+  border-radius: 4px;
+  color: brown;
+  width:100px;
+  position:relative;
+  bottom: 5%;
+  left:40%;
+  display: none;
+  }
+  
+  #chart_form{
+    display: none; 
+  }
+  
+  #chart {
+    display: none;
+    margin: 25px auto;
   }
 
 
